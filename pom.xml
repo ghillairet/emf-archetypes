@@ -23,18 +23,19 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/ghillairet/emt-archetypes.git</connection>
-        <developerConnection>scm:git:git@github.com:ghillairet/emt-archetypes.git</developerConnection>
-        <url>https://github.com/ghillairet/emt-archetypes/</url>
+        <connection>scm:git:git://github.com/ghillairet/emf-archetypes.git</connection>
+        <developerConnection>scm:git:git@github.com:ghillairet/emf-archetypes.git</developerConnection>
+        <url>https://github.com/ghillairet/emf-archetypes/</url>
     </scm>
 
     <issueManagement>
         <system>GitHub Issues</system>
-        <url>https://github.com/ghillairet/emt-archetypes/issues</url>
+        <url>https://github.com/ghillairet/emf-archetypes/issues</url>
     </issueManagement>
 
     <developers>
         <developer>
+            <id>ghillairet</id>
             <name>G. Hillairet</name>
             <email>g.hillairet@gmail.com</email>
         </developer>
