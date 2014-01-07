@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<!-- GWT modules -->
+	<inherits name="com.google.gwt.user.User" />
+
+    <inherits name="${package}.${ModelFile}.${ModelName}Edit" />
+
+    <!--
+    <inherits name="org.eclipselabs.emfjson.gwt.EMFJs" />
+    -->
+
+    <entry-point class='${ModuleQName}'/>
+
+	<source path=""/>
+</module>
+
