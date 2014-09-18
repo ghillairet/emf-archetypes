@@ -1,53 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
 
-    <groupId>org.eclipselabs</groupId>
-    <artifactId>emf-archetypes</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+	<modules>
+		<module>emf-gwt-rpc</module>
+		<module>emf-gwt-jersey</module>
+	</modules>
 
-    <licenses>
-        <license>
-            <name>EPL</name>
-            <url>www.eclipse.org/legal/epl-v10.html</url>
-        </license>
-    </licenses>
+	<groupId>org.eclipselabs</groupId>
+	<artifactId>emf-archetypes</artifactId>
+	<version>0.2.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
-    <scm>
-        <connection>scm:git:git://github.com/ghillairet/emf-archetypes.git</connection>
-        <developerConnection>scm:git:git@github.com:ghillairet/emf-archetypes.git</developerConnection>
-        <url>https://github.com/ghillairet/emf-archetypes/</url>
-    </scm>
+	<licenses>
+		<license>
+			<name>EPL</name>
+			<url>www.eclipse.org/legal/epl-v10.html</url>
+		</license>
+	</licenses>
 
-    <issueManagement>
-        <system>GitHub Issues</system>
-        <url>https://github.com/ghillairet/emf-archetypes/issues</url>
-    </issueManagement>
+	<scm>
+		<connection>scm:git:git://github.com/ghillairet/emf-archetypes.git</connection>
+		<developerConnection>scm:git:git@github.com:ghillairet/emf-archetypes.git</developerConnection>
+		<url>https://github.com/ghillairet/emf-archetypes/</url>
+	</scm>
 
-    <developers>
-        <developer>
-            <id>ghillairet</id>
-            <name>G. Hillairet</name>
-            <email>g.hillairet@gmail.com</email>
-        </developer>
-    </developers>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/ghillairet/emf-archetypes/issues</url>
+	</issueManagement>
 
-    <modules>
-        <module>emfgwt-archetype-basic</module>
-    </modules>
+	<developers>
+		<developer>
+			<id>ghillairet</id>
+			<name>G. Hillairet</name>
+			<email>g.hillairet@gmail.com</email>
+		</developer>
+	</developers>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mavenVersion>3.0</mavenVersion>
-    </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<mavenVersion>3.0</mavenVersion>
+	</properties>
+
 </project>
 
