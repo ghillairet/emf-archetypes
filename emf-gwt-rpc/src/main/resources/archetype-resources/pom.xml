@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+#set( $dollar = '$' )
+#set( $ModelFile = "${ModelName.substring(0, 1).toLowerCase()}${ModelName.substring(1)}" )
+#set( $ModelNameLower = "${ModelName.toLowerCase()}" )
+#set( $ModelNameUpper = "${ModelName.substring(0, 1).toUpperCase()}${ModelName.substring(1)}" )
+#set( $ModelURI = "http://${package}/${ModelNameUpper}" )
+#set( $module-short-name = "app" )
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>${groupId}</groupId>
+	<artifactId>${artifactId}</artifactId>
+	<version>${version}</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<gwt.version>2.6.1</gwt.version>
+		<emf-gwt.version>2.9.0-SNAPSHOT</emf-gwt.version>
+		<emf.version>2.10.0-v20140514-1158</emf.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>emfgwt-repository</id>
+			<url>http://repository-ghillairet.forge.cloudbees.com/snapshot</url>
+		</repository>
+	</repositories>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.google.gwt</groupId>
+				<artifactId>gwt-user</artifactId>
+				<version>${gwt.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.gwt</groupId>
+				<artifactId>gwt-servlet</artifactId>
+				<version>${gwt.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>3.0.1</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse</groupId>
+				<artifactId>org.eclipse.emf.gwt.ecore.edit</artifactId>
+				<version>${emf-gwt.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse</groupId>
+				<artifactId>org.eclipse.emf.gwt.ecore</artifactId>
+				<version>${emf-gwt.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.emf</groupId>
+				<artifactId>org.eclipse.emf.common</artifactId>
+				<version>${emf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.emf</groupId>
+				<artifactId>org.eclipse.emf.ecore</artifactId>
+				<version>${emf.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+					<configuration>
+						<source>${maven.compiler.source}</source>
+						<target>${maven.compiler.target}</target>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>build-helper-maven-plugin</artifactId>
+					<version>1.8</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-maven-plugin</artifactId>
+					<version>9.2.1.v20140609</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>gwt-maven-plugin</artifactId>
+					<version>${gwt.version}</version>
+					<configuration>
+						<deploy>${project.build.directory}/gwtc/extra</deploy>
+						<extra>${project.build.directory}/gwtc/extra</extra>
+						<gen>${project.build.directory}/gwtc/gen</gen>
+						<!-- 
+							There's an issue on Mac: 
+							see http://code.google.com/p/google-web-toolkit/issues/detail?id=7474 
+							<workDir>${project.build.directory}/gwtc/work</workDir>
+							<codeServerWorkDir>${project.build.directory}/gwtc/superDevMode</codeServerWorkDir> 
+						-->
+					</configuration>
+					<executions>
+						<execution>
+							<id>gwt-compile</id>
+							<phase>prepare-package</phase>
+							<goals>
+								<goal>compile</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>2.2.1</version>
+					<executions>
+						<execution>
+							<id>attach-sources</id>
+							<phase>package</phase>
+							<goals>
+								<goal>jar-no-fork</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat6-maven-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.4</version>
+					<configuration>
+						<archive>
+							<addMavenDescriptor>false</addMavenDescriptor>
+						</archive>
+					</configuration>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>
+
