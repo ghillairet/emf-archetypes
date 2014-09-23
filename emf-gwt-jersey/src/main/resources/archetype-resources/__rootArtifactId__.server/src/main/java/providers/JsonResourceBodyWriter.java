@@ -15,8 +15,8 @@ import javax.ws.rs.ext.MessageBodyWriter;
 import javax.ws.rs.ext.Provider;
 
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipselabs.emfjson.EMFJs;
-import org.eclipselabs.emfjson.map.streaming.JacksonStreamMapper;
+import org.emfjson.EMFJs;
+import org.emfjson.jackson.streaming.JacksonStreamMapper;
 
 @Provider
 @Produces("application/json")

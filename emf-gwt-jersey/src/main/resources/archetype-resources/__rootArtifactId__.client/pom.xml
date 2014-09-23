@@ -41,12 +41,12 @@
 			<artifactId>gwt-user</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse</groupId>
+			<groupId>org.eclipselabs</groupId>
 			<artifactId>org.eclipse.emf.gwt.ecore.edit</artifactId>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipselabs</groupId>
+			<groupId>org.emfjson</groupId>
 			<artifactId>emfjson-gwt</artifactId>
 			<optional>true</optional>
 		</dependency>

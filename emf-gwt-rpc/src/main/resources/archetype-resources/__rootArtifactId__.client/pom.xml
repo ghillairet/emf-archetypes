@@ -41,7 +41,7 @@
 			<artifactId>gwt-user</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse</groupId>
+			<groupId>org.eclipselabs</groupId>
 			<artifactId>org.eclipse.emf.gwt.ecore.edit</artifactId>
 			<optional>true</optional>
 		</dependency>

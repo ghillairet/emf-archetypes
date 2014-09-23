@@ -16,7 +16,7 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse</groupId>
+			<groupId>org.eclipselabs</groupId>
 			<artifactId>org.eclipse.emf.gwt.ecore</artifactId>
 			<optional>true</optional>
 		</dependency>

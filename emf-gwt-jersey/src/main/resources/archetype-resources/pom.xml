@@ -53,12 +53,12 @@
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
-				<groupId>org.eclipse</groupId>
+				<groupId>org.eclipselabs</groupId>
 				<artifactId>org.eclipse.emf.gwt.ecore.edit</artifactId>
 				<version>${emf-gwt.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.eclipse</groupId>
+				<groupId>org.eclipselabs</groupId>
 				<artifactId>org.eclipse.emf.gwt.ecore</artifactId>
 				<version>${emf-gwt.version}</version>
 			</dependency>
@@ -73,12 +73,12 @@
 				<version>${emf.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.eclipselabs</groupId>
+				<groupId>org.emfjson</groupId>
 				<artifactId>emfjson-gwt</artifactId>
 				<version>${emf-json.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.eclipselabs</groupId>
+				<groupId>org.emfjson</groupId>
 				<artifactId>emfjson-jackson</artifactId>
 				<version>${emf-json.version}</version>
 			</dependency>

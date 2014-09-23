@@ -8,8 +8,8 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipselabs.emfjson.gwt.handlers.HttpHandler;
-import org.eclipselabs.emfjson.gwt.resource.JsonResourceFactory;
+import org.emfjson.gwt.handlers.HttpHandler;
+import org.emfjson.gwt.resource.JsonResourceFactory;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;

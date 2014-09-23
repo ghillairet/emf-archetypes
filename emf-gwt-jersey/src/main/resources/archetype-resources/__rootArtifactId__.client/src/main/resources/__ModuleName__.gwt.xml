@@ -3,7 +3,7 @@
 	<!-- GWT modules -->
 	<inherits name="com.google.gwt.user.User" />
     <inherits name="org.eclipse.emf.ecore.EcoreEdit" />
-    <inherits name="org.eclipselabs.emfjson.gwt.EMFJs" />
+    <inherits name="org.emfjson.gwt.EMFJs" />
 
     <entry-point class='${ModuleQName}'/>
     <source path="" />
