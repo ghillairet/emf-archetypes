@@ -17,7 +17,7 @@
 
 	<properties>
 		<gwt.version>2.6.1</gwt.version>
-		<emf-gwt.version>2.9.0-SNAPSHOT</emf-gwt.version>
+		<emf-gwt.version>2.9.0</emf-gwt.version>
 		<emf-json.version>0.9.0-SNAPSHOT</emf-json.version>
 		<emf.version>2.10.0-v20140514-1158</emf.version>
 		<jersey.version>2.12</jersey.version>
