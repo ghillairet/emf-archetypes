@@ -28,11 +28,11 @@
 	</properties>
 
 	<repositories>
-		<repository>
-			<id>emfgwt-repository</id>
-			<url>http://repository-ghillairet.forge.cloudbees.com/snapshot</url>
-		</repository>
-	</repositories>
+        	<repository>
+            		<id>Maven Snapshots</id>
+            		<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        	</repository>
+    	</repositories>
 
 	<dependencyManagement>
 		<dependencies>
